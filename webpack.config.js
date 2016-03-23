@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
     context: __dirname,
@@ -37,6 +38,12 @@ module.exports = {
         ]
     },
     plugins: [
+
+        new BrowserSyncPlugin({
+            host: '0.0.0.0',
+            port: 8888,
+            server: { baseDir: [ __dirname ] }
+        }),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'commons',
             filename: 'commons.js'
