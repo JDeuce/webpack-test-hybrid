@@ -1,11 +1,11 @@
 let render = require('./render');
 let $ = require('jquery');
 
-$(document).on('click a[data-page]', function(e) {
-    e.preventDefault();
+$(document).on('click', 'a[data-page]', function(e) {
     let pageName = $(e.target).attr('data-page');
     let state = { pageName };
     window.history.pushState(state, pageName, pageName + '.html');
+    e.preventDefault();
     renderPage(pageName);
 });
 
