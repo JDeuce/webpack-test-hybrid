@@ -6,6 +6,7 @@ module.exports = {
     devtool: 'sourcemap',
     entry: {
         commons      : './app/app.js',
+        indexEntry   : './app/pages/index/entry.js',
         aboutEntry   : './app/pages/about/entry.js',
         contactEntry : './app/pages/contact/entry.js'
     },
