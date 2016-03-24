@@ -50,3 +50,5 @@ Based on [Webpack's hybrid-routing example](https://github.com/webpack/webpack/t
 # Things that would be nice TODO
 
   * Don't require entry.js to exist in the pages (since it's the same for all of them)
+  * Somehow stop outputting extra CSS bundles that don't get used
+    * All the CSS gets bundled into commons
