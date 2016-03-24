@@ -31,7 +31,7 @@ pages.forEach(function(page) {
 
 module.exports = {
     context: __dirname,
-    devtool: 'sourcemap',
+    devtool: 'eval-source-map',
     entry: entries,
     output: {
         path: path.join(__dirname, 'dist'),
