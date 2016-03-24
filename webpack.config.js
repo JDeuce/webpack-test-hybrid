@@ -14,6 +14,7 @@ module.exports = {
     output: {
         path: path.join(__dirname, 'dist'),
         filename: '[name].js',
+        chunkFilename: '[name].chunk.js',
         publicPath: 'dist/'
     },
     module: {
@@ -38,7 +39,6 @@ module.exports = {
         ]
     },
     plugins: [
-
         new BrowserSyncPlugin({
             host: '0.0.0.0',
             port: 8888,
@@ -49,7 +49,11 @@ module.exports = {
             filename: 'commons.js',
             // optimize any lib shared by minChunks pages into commons.js
             minChunks: 2
-        })
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            }
         })
     ]
 };
