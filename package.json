@@ -6,7 +6,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "build": "webpack",
-    "dev-server": "webpack --watch"
+    "dev": "webpack --watch"
   },
   "author": "Josh Jaques",
   "license": "MIT",

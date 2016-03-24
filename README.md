@@ -13,7 +13,7 @@ Based on [Webpack's hybrid-routing example](https://github.com/webpack/webpack/t
 # Running a browser-sync development server
 
 
-    npm run dev-server
+    npm run dev
 
 
 # What it does
