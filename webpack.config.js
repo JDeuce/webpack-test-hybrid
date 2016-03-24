@@ -46,7 +46,10 @@ module.exports = {
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'commons',
-            filename: 'commons.js'
+            filename: 'commons.js',
+            // optimize any lib shared by minChunks pages into commons.js
+            minChunks: 2
+        })
         })
     ]
 };
