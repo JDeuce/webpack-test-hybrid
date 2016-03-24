@@ -43,3 +43,4 @@ Based on [Webpack's hybrid-routing example](https://github.com/webpack/webpack/t
 
   * Automatically generate about.html, index.html and contact.html boilerplates
   * Don't require entry.js to exist in the pages (since it's the same for all of them)
+  * back button doesnt work properly at end of stack as page name is not stored during initial entry load
