@@ -37,3 +37,9 @@ Based on [Webpack's hybrid-routing example](https://github.com/webpack/webpack/t
       * Uses HTML5 history API to make it appear like multi page app
     * Behaves like a multi page app
       * You can load index.html, contact.html or about.html and things work fine
+
+
+# Things that would be nice TODO
+
+  * Automatically generate about.html, index.html and contact.html boilerplates
+  * Don't require entry.js to exist in the pages (since it's the same for all of them)
