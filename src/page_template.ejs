@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title><%= htmlWebpackPlugin.options.title %></title>
+        <%/* note: bit of a hack here to only output the first CSS file,
+        because webpack makes commons.css which has all the CSS, plus a file
+        for each page entry that has just that pages CSS. The latter is useless
+        for our purposes so we dont want to link it in. */%>
+        <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css[0] %>" />
+    </head>
+    <body>
+        <nav>
+            <a data-page="index" href="index.html">index</a>
+            <a data-page="about" href="about.html">about</a>
+            <a data-page="contact" href="contact.html">contact</a>
+        </nav>
+        <div id="content"></div>
+        <% for (var i=0,js=htmlWebpackPlugin.files.js; i < js.length; i++) { %>
+        <script src="<%= js[i] %>"></script>
+        <% } %>
+    </body>
+</html>

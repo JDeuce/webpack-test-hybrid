@@ -24,6 +24,7 @@ Based on [Webpack's hybrid-routing example](https://github.com/webpack/webpack/t
 
   * Common files are automatically refactored into common.js as they are used
   by multiple pages
+    * Example underscore.js used in about/contact, gets output to common.js
 
   * Full hybrid web app architecture:
 
@@ -38,9 +39,14 @@ Based on [Webpack's hybrid-routing example](https://github.com/webpack/webpack/t
     * Behaves like a multi page app
       * You can load index.html, contact.html or about.html and things work fine
 
+  * Long-term caching policy
+    * All js/css is hashed in the filename
+
+  * Webserver agnostic
+    * Everything is built out to static files
+    * Run it behind apache, nginx, etc
+
 
 # Things that would be nice TODO
 
-  * Automatically generate about.html, index.html and contact.html boilerplates
   * Don't require entry.js to exist in the pages (since it's the same for all of them)
-  * back button doesnt work properly at end of stack as page name is not stored during initial entry load

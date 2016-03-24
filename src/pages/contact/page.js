@@ -1,4 +1,4 @@
-console.log('hello world from contact');
+console.log('contact js code loaded');
 
 require('./contact.scss');
 let _ = require('underscore');

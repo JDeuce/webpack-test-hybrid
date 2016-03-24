@@ -1,4 +1,4 @@
-console.log('hello world from about');
+console.log('about js code loaded');
 
 require('./about.scss');
 let _ = require('underscore');
